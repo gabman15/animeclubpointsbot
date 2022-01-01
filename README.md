@@ -10,4 +10,4 @@ run "generatedb.sh" (./generatedb.sh) to generate the database
 
 run "run.sh" (./run.sh) to start the bot
 
-"./run.sh &" to keep it running in background
+run "run-daemon.sh" (./run-daemon.sh) to keep it running in background
