@@ -17,20 +17,27 @@ client.auth=auth;
 client.points=points;
 
 client.getpointimages = function(num) {
-    switch (num) {
+    let img = "";
+    console.log(num);
+    switch(num) {
     case 5:
-        return "../images/plus5points.png";
+        img = "./images/plus5points.png";
+        break;
     case 10:
-        return "../images/plus10points.png";
+        img = "./images/plus10points.png";
+        break;
     case 15:
-        return "../images/plus15points.png";
+        img = "./images/plus15points.png";
+        break;
     case -5:
-        return "../images/minus5points.png";
+        img = "./images/minus5points.png";
+        break;
     case -10:
-        return "../images/minus10points.png";
-    default:
-        return "";
+        img = "./images/minus10points.png";
+        break;
     }
+    console.log(img);
+    return img;
 }
 
 client.getUserFromMention = function(mention) {
@@ -65,6 +72,7 @@ Reflect.defineProperty(points, 'add', {
 		return newUser;
 	},
 });
+
 
 
 Reflect.defineProperty(points, 'getPoints', {
