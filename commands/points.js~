@@ -1,0 +1,4 @@
+exports.run = (client, message, args) => {
+    //const target = interaction.options.getUser('user') ?? interaction.user;
+    const target = message.author;
+    return interaction.reply(`${target.tag} has ${currency.getBalance(target.id)}💰`);

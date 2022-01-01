@@ -1,0 +1,5 @@
+exports.run = (client, message, args) => {
+    if(!args[0])
+        return;
+    client.points.add(message.author.id, args[0]);
+};
