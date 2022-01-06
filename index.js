@@ -20,7 +20,7 @@ function getRandomIntInclusive(min, max) {
   return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
 
-function getImgPath(str,has_variations) {
+function getImgPath(str,has_variations,pos) {
     let ret= `./images/${str}points`;
     if(has_variations) {
         if(getRandomIntInclusive(0,1) == 1)
@@ -34,10 +34,18 @@ client.getpointimages = function(num) {
     let novariationpoints = [1,5,10,25,69,100,420,727,-1,-5,-10,-15,-25,-69,-100,-420,-727];
     let variationpoints = [15,50,-50];
     console.log(num);
-    if(novariationpoints.indexOf(num) != -1)
-        img = getImgPath(num,false);
-    else if(variationpoints.indexOf(num) != -1)
-        img = getImgPath(num,true);
+    if(novariationpoints.indexOf(num) != -1) {
+        if(num>=0)
+            img = getImgPath(num,false,true);
+        else
+            img = getImgPath(num,false,false);
+    }
+    else if(variationpoints.indexOf(num) != -1) {
+        if(num>=0)
+            img = getImgPath(num,true,true);
+        else
+            img = getImgPath(num,true,false);
+    }
     console.log(img);
     return img;
 }

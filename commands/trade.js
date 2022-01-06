@@ -20,7 +20,7 @@ exports.run = (client, message, args) => {
        return
     }
     else {
-        client.points.add(message.author.id, 0-args[0]);
+        client.points.add(message.author.id, 0-parseInt(args[0]));
         let img = client.getpointimages(0-parseInt(args[0]));
         console.log(img);
         let s="s"

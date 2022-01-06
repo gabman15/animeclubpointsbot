@@ -17,7 +17,7 @@ exports.run = (client, message, args) => {
         return;
     }
     else if(!args[1]) {
-        client.points.add(message.author.id, 0-args[0]);
+        client.points.add(message.author.id, 0-parseInt(args[0]));
         let img = client.getpointimages(0-parseInt(args[0]));
         console.log(img);
         let s="s"
@@ -29,7 +29,7 @@ exports.run = (client, message, args) => {
     }
     else {
         let user = client.getUserFromMention(args[1]);
-        client.points.add(user.id, 0-args[0]);
+        client.points.add(user.id, 0-parseInt(args[0]));
         let img = client.getpointimages(0-parseInt(args[0]));
         console.log(img);
         let s="s"

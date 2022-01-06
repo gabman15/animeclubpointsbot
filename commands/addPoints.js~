@@ -1,3 +1,0 @@
-exports.run = (client, message, args) => {
-    currency.add(message.author.id, 1);
-};
