@@ -83,14 +83,6 @@ Reflect.defineProperty(points, 'getPoints', {
 	},
 });
 
-Reflect.defineProperty(points, 'heaven', {
-	/* eslint-disable-next-line func-name-matching */
-	value: function heaven(id) {
-		const user = points.get(id);
-		return user ? user.points : 0;
-	},
-});
-
 // When the client is ready, run this code (only once)
 client.once('ready', async () => {
     const storedBalances = await Users.findAll();
