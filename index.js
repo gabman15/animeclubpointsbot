@@ -83,8 +83,6 @@ Reflect.defineProperty(points, 'getPoints', {
 	},
 });
 
-
-
 // When the client is ready, run this code (only once)
 client.once('ready', async () => {
     const storedBalances = await Users.findAll();
