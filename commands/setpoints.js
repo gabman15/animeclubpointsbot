@@ -9,7 +9,7 @@ exports.run = (client, message, args) => {
         return;
     }
     else if(!args[1]) {
-        client.points.set(message.author.id, args[0]);
+        client.points.set(message.author.id, parseInt(args[0]));
         let s="s"
         if (args[0]==1)
             s="";
@@ -17,7 +17,7 @@ exports.run = (client, message, args) => {
     }
     else {
         let user = client.getUserFromMention(args[1]);
-        client.points.set(user.id, args[0]);
+        client.points.set(user.id, parseInt(args[0]));
         let s="s"
         if (args[0]==1)
             s="";
