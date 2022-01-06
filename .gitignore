@@ -1,3 +1,4 @@
 auth.json
 node_modules
 database.sqlite
+backupdb.sh

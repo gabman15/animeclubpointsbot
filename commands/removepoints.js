@@ -9,7 +9,7 @@ exports.run = (client, message, args) => {
         client.points.add(message.author.id, -5);
         let img = client.getpointimages(-5);
         console.log(img);
-        message.channel.send(`Added 5 Anime Club Points to the stash of ${message.author} ${distressed}`);
+        message.channel.send(`Removed 5 Anime Club Points from ${message.author} ${distressed}`);
         message.channel.send({files: [img]});
     }
     else if(args[0] < 0) {
