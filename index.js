@@ -21,7 +21,12 @@ function getRandomIntInclusive(min, max) {
 }
 
 function getImgPath(str,has_variations,pos) {
-    let ret= `./images/${str}points`;
+    let ret= "./images/"
+    if(pos)
+        ret+="plus";
+    else
+        ret+="minus";
+    ret+=`${str}points`;
     if(has_variations) {
         if(getRandomIntInclusive(0,1) == 1)
             ret+="1";
