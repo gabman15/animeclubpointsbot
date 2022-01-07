@@ -36,7 +36,7 @@ function getImgPath(str,has_variations,pos) {
 
 client.getpointimages = function(num) {
     let img = "";
-    let novariationpoints = [1,5,10,25,69,100,420,727,-1,-5,-10,-15,-25,-69,-100,-420,-727];
+    let novariationpoints = [1,5,10,25,69,100,420,727,-1,-5,-10,-15,-25,-69,-100,-420,-727,-1000000];
     let variationpoints = [15,50,-50];
     console.log(num);
     if(novariationpoints.indexOf(num) != -1) {
