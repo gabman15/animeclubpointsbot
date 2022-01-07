@@ -43,13 +43,13 @@ client.getpointimages = function(num) {
         if(num>=0)
             img = getImgPath(num,false,true);
         else
-            img = getImgPath(num,false,false);
+            img = getImgPath(Math.abs(num),false,false);
     }
     else if(variationpoints.indexOf(num) != -1) {
         if(num>=0)
             img = getImgPath(num,true,true);
         else
-            img = getImgPath(num,true,false);
+            img = getImgPath(Math.abs(num),true,false);
     }
     console.log(img);
     return img;
